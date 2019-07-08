@@ -29,31 +29,31 @@
 		<div class="row">
 			<div class="col-12">
 				<div class="shape-container">
-					<div class="p2-circle bg-purple"></div>
-					<div class="p2-circle bg-purple"></div>
-					<div class="p2-circle bg-purple"></div>
-					<div class="p2-circle bg-purple"></div>
-					<div class="p2-circle bg-purple"></div>
-					<div class="p2-circle bg-green"></div>
-					<div class="p2-circle bg-green"></div>
-					<div class="p2-circle bg-green"></div>
-					<div class="p2-circle bg-green"></div>
-					<div class="p2-circle bg-green"></div>
-					<div class="p2-circle bg-yellow p2-border"></div>
-					<div class="p2-circle bg-yellow p2-border"></div>
-					<div class="p2-circle bg-yellow"></div>
-					<div class="p2-circle bg-yellow"></div>
-					<div class="p2-circle bg-yellow"></div>
-					<div class="p2-circle bg-orange p2-border"></div>
-					<div class="p2-circle bg-orange p2-border"></div>
-					<div class="p2-circle bg-orange"></div>
-					<div class="p2-circle bg-orange"></div>
-					<div class="p2-circle bg-orange"></div>
-					<div class="p2-circle bg-blue"></div>
-					<div class="p2-circle bg-blue"></div>
-					<div class="p2-circle bg-blue p2-border"></div>
-					<div class="p2-circle bg-blue p2-border"></div>
-					<div class="p2-circle bg-blue"></div>
+					<div class="p2-circle bg-purple" id="p1"></div>
+					<div class="p2-circle bg-purple" id="p2"></div>
+					<div class="p2-circle bg-purple" id="p3"></div>
+					<div class="p2-circle bg-purple" id="p4"></div>
+					<div class="p2-circle bg-purple" id="p5"></div>
+					<div class="p2-circle bg-green" id="g1"></div>
+					<div class="p2-circle bg-green" id="g2"></div>
+					<div class="p2-circle bg-green" id="g3"></div>
+					<div class="p2-circle bg-green" id="g4"></div>
+					<div class="p2-circle bg-green" id="g5"></div>
+					<div class="p2-circle bg-yellow p2-border" id="y1"></div>
+					<div class="p2-circle bg-yellow p2-border" id="y2"></div>
+					<div class="p2-circle bg-yellow" id="y3"></div>
+					<div class="p2-circle bg-yellow" id="y4"></div>
+					<div class="p2-circle bg-yellow" id="y5"></div>
+					<div class="p2-circle bg-orange p2-border" id="o1"></div>
+					<div class="p2-circle bg-orange p2-border" id="o2"></div>
+					<div class="p2-circle bg-orange" id="o3"></div>
+					<div class="p2-circle bg-orange" id="o4"></div>
+					<div class="p2-circle bg-orange" id="o5"></div>
+					<div class="p2-circle bg-blue" id="b1"></div>
+					<div class="p2-circle bg-blue" id="b2"></div>
+					<div class="p2-circle bg-blue p2-border" id="b3"></div>
+					<div class="p2-circle bg-blue p2-border" id="b4"></div>
+					<div class="p2-circle bg-blue" id="b5"></div>
 					<div class="p2-circle" id="gradient-circle"></div>
 				</div>
 			</div>
@@ -63,7 +63,31 @@
 
 
 <script type="text/javascript">
-	// your solution here
+  $(document).ready(() => {
+  const $purpleCircle = $('#p1,#p2,#p3,#p4,#p5');
+  const $blueCircle = $('#b1,#b2,#b3,#b4,#b5');
+  const $greenCircle = $('#g1,#g2,#g3,#g4,#g5');
+  const $borderCircle = $('#y1,#y2,#o1,#o2,#b3,#b4');
+	$purpleCircle.on('click', () => {
+    $purpleCircle.hide();
+  })
+  $greenCircle.on('click', () => {
+    $blueCircle.hide();
+    $greenCircle.hide();
+  })
+  $borderCircle.on('click', () => {
+    $borderCircle.hide();
+  })
+  $("#gradient-circle").on('mouseenter', () => {
+    $("#gradient-circle").hide();
+    })
+  $(".btn").on('click', () => {
+    $(".p2-circle").show();
+  })
+    
+    
+    
+  })
 
 </script>
 </body>
